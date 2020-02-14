@@ -1,0 +1,37 @@
+<head>
+  <script src="https://kit.fontawesome.com/df002600cd.js" crossorigin="anonymous"></script>
+</head>
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+
+  <div class="form-inline" >
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="search">
+    <button class="btn  my-2 my-sm-0 search" type="submit" (click)="Searchmethod()">Search</button> 
+  </div>
+</nav>
+
+<div class="container">
+
+    <ul class="ul" *ngFor="let b of articles">
+      <div class="DivUl">
+      <li>
+
+          <h1>{{b.title}}</h1>
+          
+          <h2><span>Author:</span> {{b.author}}</h2>
+
+          <p>{{b.publishedAt}} </p>
+
+          <p> hre{{b.description}}</p>
+
+          <a href="{{b.url}}">Read More</a> 
+
+
+
+          
+
+      </li>
+      </div>
+    </ul>
+
+</div>
